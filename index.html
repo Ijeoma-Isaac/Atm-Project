@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../ATM PROJECT/style.css">
+</head>
+
+<body>
+    <script>
+        var poop = ["111", "123", "434", "235", "675", "234", "345", "456", "567", "678", "789", "890"]
+        var balance = 1000000
+        var pin = prompt("What is your pin?")
+        if (poop.includes(pin)) {
+            var bank = prompt("What do you want to do today? a) Withdraw b)Check balance c)Deposit d)Cancel")
+            switch (bank) {
+                case "a":
+                    var draw = prompt("How much do you want to withdraw")
+                    balance = balance - draw
+                    console.log(`Sucess! You have withdrawn ${draw}. Your new balance is ${balance}`)
+                    break
+                case "b":
+                    console.log(`Your balance is ${balance}`)
+                    break
+                case "c":
+                    var deposit = parseInt(prompt("How much do you want to deposit"))
+                    balanceDeposit = deposit + balance
+                    console.log(`You have successfully deposited ${deposit}. Your new balance is ${balanceDeposit}`)
+                    break
+                case "d":
+                    console.log("Thank you for patronising us")
+                    break
+            }
+        }
+        else {
+            console.log("Try again")
+        }
+    </script>
+</body>
+
+</html>
